@@ -17,7 +17,7 @@ class SebhaTab extends StatelessWidget {
       ),
       SizedBox(height: 20),
       Container(
-        height: 70,
+        height: 77,
         width: 69,
         margin: EdgeInsets.all(10),
         decoration: BoxDecoration(
