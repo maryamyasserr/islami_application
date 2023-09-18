@@ -21,7 +21,7 @@ class MyTheme {
           titleLarge: GoogleFonts.elMessiri(
               color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
           titleMedium: GoogleFonts.elMessiri(
-              color: Colors.black, fontSize: 25, fontWeight: FontWeight.w700),
+              color: Colors.black, fontSize: 25, fontWeight: FontWeight.w500),
           titleSmall: GoogleFonts.elMessiri(
               color: Colors.black,
               fontSize: 20,
