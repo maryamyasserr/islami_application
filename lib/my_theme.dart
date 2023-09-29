@@ -26,4 +26,25 @@ class MyTheme {
               color: Colors.black,
               fontSize: 20,
               fontWeight: FontWeight.normal)));
+  static ThemeData darkMode = ThemeData(
+      primaryColor: primaryLightMode,
+      scaffoldBackgroundColor: Colors.transparent,
+      appBarTheme: AppBarTheme(
+          iconTheme: IconThemeData(color: Colors.black),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          centerTitle: true),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          selectedItemColor: selectedColor,
+          unselectedItemColor: unselectedColor,
+          backgroundColor: primaryLightMode),
+      textTheme: TextTheme(
+          titleLarge: GoogleFonts.elMessiri(
+              color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
+          titleMedium: GoogleFonts.elMessiri(
+              color: Colors.black, fontSize: 25, fontWeight: FontWeight.w500),
+          titleSmall: GoogleFonts.elMessiri(
+              color: Colors.black,
+              fontSize: 20,
+              fontWeight: FontWeight.normal)));
 }

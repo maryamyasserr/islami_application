@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
+        themeMode: ThemeMode.light,
         initialRoute: HomeScreen.routeName,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        locale: Locale('ar'),
+        locale: Locale('en'),
         routes: {
           HomeScreen.routeName: (context) => HomeScreen(),
           QuranDetails.routeName: (context) => QuranDetails(),
