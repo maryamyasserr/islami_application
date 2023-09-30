@@ -14,6 +14,7 @@ class QuranItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
     return Row(
       children: [
         Expanded(
@@ -25,8 +26,8 @@ class QuranItem extends StatelessWidget {
         ),
         Container(
           width: 3,
-          height: 45,
-          color: Theme.of(context).primaryColor,
+          height: 48,
+          color: theme.colorScheme.onPrimary,
         ),
         Expanded(
             child: InkWell(

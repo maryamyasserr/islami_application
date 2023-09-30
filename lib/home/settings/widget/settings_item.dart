@@ -33,7 +33,7 @@ class SettingsItem extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(
-                    color: theme.primaryColor,
+                    color: theme.colorScheme.onSecondary,
                     width: 2
                 )
 
@@ -44,7 +44,9 @@ class SettingsItem extends StatelessWidget {
                 Text(selectedOption,
                   style: theme.textTheme.titleMedium,
                 ),
-                Icon(Icons.arrow_drop_down, size: 35,),
+                Icon(Icons.arrow_drop_down, size: 35,
+                  color: theme.colorScheme.onSecondary,
+                ),
               ],
             ),
           ),

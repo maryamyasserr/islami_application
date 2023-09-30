@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/core/provider/app_provider.dart';
 import 'package:islami_app/home/hadeth/hadeth_tab.dart';
 import 'package:islami_app/home/quran/quran_tab.dart';
 import 'package:islami_app/home/radio/radio_tab.dart';
 import 'package:islami_app/home/sebha/sebha_tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/home/settings/settings_view.dart';
+import 'package:islami_app/my_theme.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'HomeScreen';
@@ -18,10 +21,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var appProvider = Provider.of<AppProvider>(context);
     return Stack(
       children: [
         Image.asset(
-          'assets/images/main_background.png',
+          appProvider.backgroundImage(),
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.fill,

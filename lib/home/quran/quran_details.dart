@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami_app/core/provider/app_provider.dart';
+import 'package:provider/provider.dart';
 
+import '../../my_theme.dart';
 import 'item_sura_details.dart';
 
 class QuranDetails extends StatefulWidget {
@@ -11,18 +14,21 @@ class QuranDetails extends StatefulWidget {
 }
 
 class _QuranDetailsState extends State<QuranDetails> {
+  
   List<String> verses = [];
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
     var args = ModalRoute.of(context)?.settings.arguments as SuraDetails;
+    var appProvider = Provider.of<AppProvider>(context);
     if (verses.isEmpty) {
       loadfile(args.index);
     }
 
     return Stack(children: [
       Image.asset(
-        'assets/images/main_background.png',
+        appProvider.backgroundImage(),
         width: double.infinity,
         height: double.infinity,
         fit: BoxFit.fill,
@@ -41,7 +47,7 @@ class _QuranDetailsState extends State<QuranDetails> {
           ),
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
           decoration: BoxDecoration(
-            color: Color(0xffF8F8F8).withOpacity(0.8),
+            color: theme.colorScheme.onBackground.withOpacity(0.8),
             borderRadius: BorderRadius.circular(25),
           ),
           child: Column(
@@ -51,18 +57,19 @@ class _QuranDetailsState extends State<QuranDetails> {
                 children: [
                   Text(
                     args.name,
-                    style: Theme.of(context).textTheme.titleLarge,
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      color: theme.colorScheme.onSecondary
+                    ),
                   ),
                   SizedBox(width: 4),
                   Icon(
                     Icons.play_circle,
                     size: 33,
-                    color: Colors.black,
+                    color: theme.colorScheme.onSecondary,
                   )
                 ],
               ),
               Divider(
-                color: Theme.of(context).primaryColor,
                 thickness: 2,
                 endIndent: 30,
                 indent: 30,
