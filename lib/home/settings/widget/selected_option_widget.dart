@@ -26,6 +26,7 @@ class SelectedOptionWidget extends StatelessWidget {
           style: theme.textTheme.titleMedium,
           ),
           Icon(Icons.check_rounded,
+          color: theme.colorScheme.onSecondary,
           size: 35,
           )
         ],

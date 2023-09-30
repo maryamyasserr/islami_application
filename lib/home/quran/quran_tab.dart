@@ -121,11 +121,11 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
     return Column(
       children: [
         Center(child: Image.asset('assets/images/quran_logo.png')),
         Divider(
-          color: Theme.of(context).primaryColor,
           thickness: 3,
         ),
         Row(
@@ -139,7 +139,7 @@ class QuranTab extends StatelessWidget {
             Container(
               width: 3,
               height: 45,
-              color: Theme.of(context).primaryColor,
+              color: theme.colorScheme.onPrimary,
             ),
             Expanded(
                 child: Text(
@@ -150,7 +150,6 @@ class QuranTab extends StatelessWidget {
           ],
         ),
         Divider(
-          color: Theme.of(context).primaryColor,
           thickness: 3,
         ),
         Expanded(

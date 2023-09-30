@@ -7,22 +7,22 @@ class UnselectedOptionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      padding: EdgeInsets.all(14),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            unselectedTitle,
-            style: theme.textTheme.titleMedium,
-          ),
-          Icon(
-            Icons.check_rounded,
-            size: 35,
-          )
-        ],
-      ),
-    );
+    return  Container(
+        margin: EdgeInsets.symmetric(horizontal: 10 , vertical: 10),
+        padding: EdgeInsets.all(14),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white10.withOpacity(0.05),
+          borderRadius: BorderRadius.circular(8),
+
+        ),
+
+        child :Text(
+              unselectedTitle,
+              style: theme.textTheme.titleMedium,
+            ),
+
+    )
+    ;
   }
 }

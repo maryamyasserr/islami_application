@@ -19,7 +19,6 @@ class _HadethTabState extends State<HadethTab> {
       children: [
         Center(child: Image.asset('assets/images/hadeth_icon.png')),
         Divider(
-          color: Theme.of(context).primaryColor,
           thickness: 3,
         ),
         Row(
@@ -33,14 +32,12 @@ class _HadethTabState extends State<HadethTab> {
           ],
         ),
         Divider(
-          color: Theme.of(context).primaryColor,
           thickness: 3,
         ),
         Expanded(
           child: ListView.separated(
             separatorBuilder: (context, index) {
               return Divider(
-                color: Theme.of(context).primaryColor,
                 thickness: 1,
               );
             },
